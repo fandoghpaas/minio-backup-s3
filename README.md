@@ -1,3 +1,5 @@
+[![MIT license][license-image]][license-url]
+[![Docker][docker-image]][docker-url]
 
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://github.com/fandoghpaas/minio-backup-s3/blob/master/LICENSE
