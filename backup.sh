@@ -18,7 +18,7 @@ mirror_s3 () {
 
   echo "Mirroring buckets from ${SOURCE_STORAGE} to ${DESTINATION_STORAGE}..."
 
-  ./mc mirror SOURCE DESTINATION
+  ./mc --insecure mirror SOURCE DESTINATION
 
   if [ $? != 0 ]; then
     >&2 echo "Error in migarating files from ${SOURCE_STORAGE} to ${DESTINATION_STORAGE}!"
@@ -26,4 +26,4 @@ mirror_s3 () {
 
 }
  
-mirror_s3 $MC_HOST_SOURCE $MC_HOST_SOURCE
+mirror_s3 $MC_HOST_SOURCE $MC_HOST_DESTINATION
