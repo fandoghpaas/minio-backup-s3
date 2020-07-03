@@ -1,3 +1,6 @@
+[![MIT license][license-image]][license-url]
+[![Docker][docker-image]][docker-url]
+
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 [license-url]: https://github.com/fandoghpaas/minio-backup-s3/blob/master/LICENSE
 
@@ -20,7 +23,7 @@ Copy below manifest in a YAML file and enter `fandogh service apply -f <FILE_NAM
 kind: InternalService
 name: minio-backup
 spec:
-  image: _/fandoghpaas/minio-backup-s3:1.0.0
+  image: fandoghpaas/minio-backup-s3:1.0.0
   image_pull_policy: Always
   env:
   - name: MC_HOST_SOURCE
@@ -41,7 +44,7 @@ spec:
 
 
 ## SCHEDULE
-You can set the `SCHEDULE` environment variable like `-e SCHEDULE="@daily"` or `-e SCHEDULE="0 0 */4 * * *"` to run the backup automatically.
+You can set the `SCHEDULE` environment variable like `-e SCHEDULE="@daily"` runs every day at the same time that it was started or `-e SCHEDULE="0 0 */4 * * *"` to run the backup automatically every 4 hours or any other cron time that you prefer.
 
 > If you don't enter SCHEDULE env, container will perform its actions only one time and terminate!
 
