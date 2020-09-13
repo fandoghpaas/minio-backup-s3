@@ -23,7 +23,7 @@ Copy below manifest in a YAML file and enter `fandogh service apply -f <FILE_NAM
 kind: InternalService
 name: minio-backup
 spec:
-  image: fandoghpaas/minio-backup-s3:1.0.0
+  image: fandoghpaas/minio-backup-s3:1.1.0
   image_pull_policy: Always
   env:
   - name: MC_HOST_SOURCE
